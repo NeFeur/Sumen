@@ -12,7 +12,7 @@ var servers = {};
  
 client.on(`ready`, function () {
     console.log("Je suis connecter !");
-    client.user.setActivity("s_aide | By nefer")
+    client.user.setActivity("s.aide")
 })
 
 function play(connection, message) {
