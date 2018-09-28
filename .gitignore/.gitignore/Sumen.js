@@ -33,8 +33,16 @@ client.on("message", message => {
       if(message.content === prefix + "aide")
         var aide_embed = new Discord.RichEmbed()
          .setColor("#61BCFF")
-         .setTitle("cette command et en maintenances...")
-         .setDescription("en raison de probleme Informatiques cette command et en maintenances donc tous les commands egalement")
+         .setTitle("Bienvenue sur le Menu d'aide !")
+            .setDescription("Ici tu trouveras les differentes Commande du bot")
+            .addField("s.aide", "Vous affiche le Menu d'aide")
+            .addField("s.invite", "Vous affiche une invitation")
+            .addField("s.stat", "Vousaffiche quelques Information sur Vous")
+            .addField("s.infobot", "Vous affiche des Information sur le bot")
+            .addField("s.infoserv", "Vous affiche quelque Information sur le Serveur")
+            .addField("s.kick", "KIck une personne choisi")
+            .addField("s.ban", "Ban la personne demander")
+            .addField("s.clear", "efface le nombres de message demander")
       message.channel.sendMessage(aide_embed);
 
       if(message.content === prefix + "invite")
