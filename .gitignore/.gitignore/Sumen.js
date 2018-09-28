@@ -48,9 +48,9 @@ client.on("message", message => {
       if(message.content === prefix + "invite")
         var invite_embed = new Discord.RichEmbed()
          .setColor("#61BCFF")
-         .setTitle("| *Voici m'a seul invitations Disponnible!*")
+         .setTitle("Voici m'a seul invitations Disponnible!")
          .setDescription("Merci de l'envoyer a plusieur personne")
-         .addField("| **Link:** *https://discordapp.com/oauth2/authorize?client_id=490798358168993792&scope=bot&permissions=2146958847*")
+         .addField("Link: https://discordapp.com/oauth2/authorize?client_id=490798358168993792&scope=bot&permissions=2146958847")
          .setFooter("Sumen| By Nefer#4398")
          message.channel.sendMessage(invite_embed);
 
@@ -67,8 +67,8 @@ client.on("message", message => {
 
             .setColor("#4398")
             .setTitle(`Statistiques de l'utilisateur : ${message.author.username}`)
-            .addField(`:id:| de l'utilisateur`, msgauthor, true)
-            .addField(":timer:| Date de creation de l'utilisateur:", userCreateDate[1] + ' ' + userCreateDate[2] + ' ' + userCreateDate[3])
+            .addField(`:id: de l'utilisateur`, msgauthor, true)
+            .addField(":timer: Date de creation de l'utilisateur:", userCreateDate[1] + ' ' + userCreateDate[2] + ' ' + userCreateDate[3])
             .setThumbnail(message.author.avatarURL)
             .setFooter("Sumen | By Nefer#4398")
             message.reply("je t'es envoyer t'es Statistiques en Priver !")
@@ -78,10 +78,10 @@ client.on("message", message => {
         if(message.content === prefix + "infobot") {
             var infobot_embed = new Discord.RichEmbed()
             .setColor("#4398")
-            .setTitle("| Voici quelques Information sur moi !")
-            .addField(":robot:| Nom :", `${client.user.tag}`, true)
-            .addField(":hash:| Mon Descriminateur :", `#${client.user.discriminator}`)
-            .addField(":id:| ID :" , `${client.user.id}`)
+            .setTitle("Voici quelques Information sur moi !")
+            .addField(":robot:", `${client.user}`, true)
+            .addField(":hash:", `#${client.user.discriminator}`)
+            .addField(":ID:" , `${client.user.id}`)
             .setFooter("Sumen | By Nefer#4398")
             message.channel.sendMessage(infobot_embed)
 
@@ -89,9 +89,9 @@ client.on("message", message => {
         if(message.content === prefix + "infoserv") {
             var infoserv_embed = new Discord.RichEmbed()
             .setColor("#4398")
-            .setTitle("| Voici Quelques Informations sur le serveur !")
-            .addField("| Nombre de membres:", message.guild.member.size)
-            .addField("| Nombre de salons & de Categories", message.guild.channels.size)
+            .setTitle("Voici Quelques Informations sur le serveur !")
+            .addField("Nombre de membres:", message.guild.channels.member.size)
+            .addField("Nombre de salons & de Categories", message.guild.channels.size)
             .setThumbnail(message.guild.avatarURL)
             .setFooter("Sumen | By Nefer#4398")
             message.channel.sendMessage(infoserv_embed)
