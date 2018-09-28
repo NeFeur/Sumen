@@ -50,7 +50,7 @@ client.on("message", message => {
          .setColor("#61BCFF")
          .setTitle("Voici m'a seul invitations Disponnible!")
          .setDescription("Merci de l'envoyer a plusieur personne")
-         .addField("Link: https://discordapp.com/oauth2/authorize?client_id=490798358168993792&scope=bot&permissions=2146958847")
+         .addField("Link:", "https://discordapp.com/oauth2/authorize?client_id=490798358168993792&scope=bot&permissions=2146958847")
          .setFooter("Sumen| By Nefer#4398")
          message.channel.sendMessage(invite_embed);
 
@@ -81,7 +81,7 @@ client.on("message", message => {
             .setTitle("Voici quelques Information sur moi !")
             .addField(":robot:", `${client.user}`, true)
             .addField(":hash:", `#${client.user.discriminator}`)
-            .addField(":ID:" , `${client.user.id}`)
+            .addField(":id:" , `${client.user.id}`)
             .setFooter("Sumen | By Nefer#4398")
             message.channel.sendMessage(infobot_embed)
 
@@ -90,7 +90,7 @@ client.on("message", message => {
             var infoserv_embed = new Discord.RichEmbed()
             .setColor("#4398")
             .setTitle("Voici Quelques Informations sur le serveur !")
-            .addField("Nombre de membres:", message.guild.channels.member.size)
+            .addField("Nombre de membres:", message.guild.member.size)
             .addField("Nombre de salons & de Categories", message.guild.channels.size)
             .setThumbnail(message.guild.avatarURL)
             .setFooter("Sumen | By Nefer#4398")
@@ -140,7 +140,7 @@ client.on("message", message => {
 
           let args = message.content.split(" ").slice(1);
 
-          if(!args[0]) return message.channel.send(":exclamation:| tu dois preciser un nombre de messages a suprimer !")
+          if(!args[0]) return message.channel.send("tu dois preciser un nombre de messages a suprimer !")
           message.channel.bulkDelete(args[0]).then(() => {
               message.channel.send(`${args[0]} messages ont ete suprimer !`);
           });
