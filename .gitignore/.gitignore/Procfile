@@ -1,1 +1,1 @@
-worker: node Sumen.js
+worker: node dogbot.js
